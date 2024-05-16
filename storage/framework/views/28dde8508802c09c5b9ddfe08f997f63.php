@@ -6,7 +6,7 @@
             <?php if($errors->any()): ?>
                 <div class="col-12">
                     <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="alert alert-danger"><?php echo e($error); ?></div>
+                        <div class="alert alert-danger "><?php echo e($error); ?></div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             <?php endif; ?>
@@ -34,5 +34,4 @@
         </form>
     </div>
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layouts/auth_nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/auth/login.blade.php ENDPATH**/ ?>
