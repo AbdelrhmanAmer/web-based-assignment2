@@ -21,37 +21,40 @@
         <form action="<?php echo e(route('register.post')); ?>" method="POST" style="width: 500px" class="ms-auto me-auto mt-3">
             <?php echo csrf_field(); ?>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="text" class="form-control" name="name" placeholder="Enter your name">
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="text" class="form-control" name="username" placeholder="Enter your username">
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="email" class="form-control" name="email" placeholder="Enter your email">
             </div>
 
-            <div class="mb-3">
-                <input type="date" class="form-control" name="date" />
+            <div class="mb-4">
+                <div class="d-flex align-items-center"> 
+                    <input type="date" class="form-control me-2" name="date"> <!-- 'me-2' adds margin to the right of the input -->
+                    <a class="btn btn-secondary" href="#" role="button" style="white-space: nowrap;">Check Actors</a>
+                </div>
             </div>
-
-            <div class="mb-3">
+            
+            <div class="mb-4">
                 <input type="number" class="form-control" name="phone" placeholder="Enter phone number">
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="text" class="form-control" name="address" placeholder="Enter your address">
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="password" class="form-control" name="password" placeholder="Enter password">
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <input type="file" class="form-control" name="image">
             </div>
 
@@ -60,4 +63,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts/navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/auth/register.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts/auth_nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/auth/register.blade.php ENDPATH**/ ?>
