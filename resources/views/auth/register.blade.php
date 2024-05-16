@@ -4,26 +4,44 @@
 
 @section('content')
     <div class="container">
-        <form style="width: 500px" class="ms-auto me-auto mt-3">
+        <div class="mt-5">
+            @if ($errors->any())
+                <div class="col-12">
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                    @endforeach
+                </div>
+            @endif
+
+            @if (session()->has('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>
+            @endif
+            @if (session()->has('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
+        </div>
+        <form action="{{ route('register.post') }}" method="POST" style="width: 500px" class="ms-auto me-auto mt-3">
+            @csrf
+
             <div class="mb-3">
                 <input type="text" class="form-control" name="name" placeholder="Enter your name">
             </div>
             <div class="mb-3">
                 <input type="text" class="form-control" name="username" placeholder="Enter your username">
             </div>
-            
+
             <div class="mb-3">
                 <input type="email" class="form-control" name="email" placeholder="Enter your email">
             </div>
 
             <div class="mb-3">
-                <input id="startDate" class="form-control" name="date" type="date" />
+                <input type="date" class="form-control" name="date" />
             </div>
 
             <div class="mb-3">
                 <input type="number" class="form-control" name="phone" placeholder="Enter phone number">
             </div>
-           
+
             <div class="mb-3">
                 <input type="text" class="form-control" name="address" placeholder="Enter your address">
             </div>
@@ -32,11 +50,11 @@
                 <input type="password" class="form-control" name="password" placeholder="Enter password">
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password">
+                <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
             </div>
-            
+
             <div class="mb-3">
-                <input type="file" class="form-control" name="file" >
+                <input type="file" class="form-control" name="image">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

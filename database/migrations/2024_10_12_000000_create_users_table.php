@@ -17,10 +17,9 @@ return new class extends Migration
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
-            $table->date('date');
+            $table->date('date')->nullable();
+            $table->string('address')->nullable();
             $table->integer('phone');
-            $table->text('address');
-            $table->foreignId('images_id')->constrained();
             $table->timestamps();
         });
     }

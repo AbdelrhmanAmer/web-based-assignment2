@@ -2,26 +2,44 @@
 
 <?php $__env->startSection('content'); ?>
     <div class="container">
-        <form style="width: 500px" class="ms-auto me-auto mt-3">
+        <div class="mt-5">
+            <?php if($errors->any()): ?>
+                <div class="col-12">
+                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="alert alert-danger"><?php echo e($error); ?></div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if(session()->has('error')): ?>
+                <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
+            <?php endif; ?>
+            <?php if(session()->has('success')): ?>
+                <div class="alert alert-success"><?php echo e(session('success')); ?></div>
+            <?php endif; ?>
+        </div>
+        <form action="<?php echo e(route('register.post')); ?>" method="POST" style="width: 500px" class="ms-auto me-auto mt-3">
+            <?php echo csrf_field(); ?>
+
             <div class="mb-3">
                 <input type="text" class="form-control" name="name" placeholder="Enter your name">
             </div>
             <div class="mb-3">
                 <input type="text" class="form-control" name="username" placeholder="Enter your username">
             </div>
-            
+
             <div class="mb-3">
                 <input type="email" class="form-control" name="email" placeholder="Enter your email">
             </div>
 
             <div class="mb-3">
-                <input id="startDate" class="form-control" name="date" type="date" />
+                <input type="date" class="form-control" name="date" />
             </div>
 
             <div class="mb-3">
                 <input type="number" class="form-control" name="phone" placeholder="Enter phone number">
             </div>
-           
+
             <div class="mb-3">
                 <input type="text" class="form-control" name="address" placeholder="Enter your address">
             </div>
@@ -30,11 +48,11 @@
                 <input type="password" class="form-control" name="password" placeholder="Enter password">
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password">
+                <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
             </div>
-            
+
             <div class="mb-3">
-                <input type="file" class="form-control" name="file" >
+                <input type="file" class="form-control" name="image">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

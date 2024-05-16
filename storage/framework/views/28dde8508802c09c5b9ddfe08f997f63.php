@@ -2,7 +2,25 @@
 
 <?php $__env->startSection('content'); ?>
     <div class="container">
-        <form style="width: 500px" class="ms-auto me-auto mt-3">
+        <div class="mt-5">
+            <?php if($errors->any()): ?>
+                <div class="col-12">
+                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="alert alert-danger"><?php echo e($error); ?></div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if(session()->has('error')): ?>
+                <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
+            <?php endif; ?>
+            <?php if(session()->has('success')): ?>
+                <div class="alert alert-success"><?php echo e(session('success')); ?></div>
+            <?php endif; ?>
+        </div>
+        <form action="<?php echo e(route('login.post')); ?>" method="POST" style="width: 500px" class="ms-auto me-auto mt-3">
+            <?php echo csrf_field(); ?>
+
             <div class="mb-3">
                 <input type="email" class="form-control" name="email" placeholder="Enter your email">
             </div>
