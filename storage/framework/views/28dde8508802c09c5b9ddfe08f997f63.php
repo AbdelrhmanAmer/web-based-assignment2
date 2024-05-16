@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Login'); ?>
+<?php $__env->startSection('title', __('messages.login')); ?>
 
 <?php $__env->startSection('content'); ?>
     <div class="container">
@@ -6,7 +6,7 @@
             <?php if($errors->any()): ?>
                 <div class="col-12">
                     <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="alert alert-danger "><?php echo e($error); ?></div>
+                        <div class="alert alert-danger"><?php echo e($error); ?></div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             <?php endif; ?>
@@ -22,16 +22,16 @@
             <?php echo csrf_field(); ?>
 
             <div class="container my-4 mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                <input type="email" class="form-control" name="email" placeholder="<?php echo e(__('messages.enter_email')); ?>">
             </div>
-            <div class="container my-4   mb-3">
-                <input type="password" class="form-control" name="password" placeholder="Enter password">
+            <div class="container my-4 mb-3">
+                <input type="password" class="form-control" name="password" placeholder="<?php echo e(__('messages.enter_password')); ?>">
             </div>
-            <div class="container my-4   mb-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
-
+            <div class="container my-4 mb-3">
+                <button type="submit" class="btn btn-primary"><?php echo e(__('messages.submit')); ?></button>
             </div>
         </form>
     </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts/auth_nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/auth/login.blade.php ENDPATH**/ ?>

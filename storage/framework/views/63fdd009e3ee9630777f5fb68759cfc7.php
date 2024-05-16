@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,17 +19,28 @@
             <div class="container">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link" href="#"><?php echo e(__('messages.dashboard')); ?></a>
                     </li>
                 </ul>
 
                 <div class="d-flex align-items-center">
                     <ul class="nav nav-pills nav-fill me-2">
-                        <li class="nav-item">
-                            <a class="nav-link underline-link" href="<?php echo e(route('login')); ?>">Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php echo e(__('messages.language')); ?>
+
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'en')); ?>"><?php echo e(__('messages.english')); ?></a></li>
+                                <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'ar')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?php echo e(route('register')); ?>">Register</a>
+                            <a class="nav-link underline-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('messages.login')); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?php echo e(route('register')); ?>"><?php echo e(__('messages.register')); ?></a>
                         </li>
                     </ul>
                     <a class="btn btn-dark px-3" href="https://github.com/AbdelrhmanAmer/web-based-assignment2"
@@ -39,6 +50,7 @@
         </nav>
 
         <?php echo $__env->yieldContent('content'); ?>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Register'); ?>
+<?php $__env->startSection('title', __('messages.register')); ?>
 
 <?php $__env->startSection('content'); ?>
     <style>
@@ -28,53 +28,53 @@
             <?php echo csrf_field(); ?>
 
             <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                <label for="name" class="form-label"><?php echo e(__('messages.name')); ?>:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="<?php echo e(__('messages.enter_name')); ?>">
             </div>
             <div class="mb-3">
-                <label for="username" class="form-label">Username:</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                <label for="username" class="form-label"><?php echo e(__('messages.username')); ?>:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="<?php echo e(__('messages.enter_username')); ?>">
             </div>
 
             <div class="mb-3">
-                <label for="date" class="form-label">Date of Birth:</label>
+                <label for="email" class="form-label"><?php echo e(__('messages.email')); ?>:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="<?php echo e(__('messages.enter_email')); ?>">
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label"><?php echo e(__('messages.date_of_birth')); ?>:</label>
                 <div class="d-flex align-items-center">
                     <input type="date" class="form-control me-2" id="date" name="date">
-                    <a class="btn btn-secondary" href="#" role="button" style="white-space: nowrap;">Check Actors</a>
+                    <a class="btn btn-secondary" href="#" role="button" style="white-space: nowrap;"><?php echo e(__('messages.check_actors')); ?></a>
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number:</label>
-                <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+                <label for="phone" class="form-label"><?php echo e(__('messages.phone_number')); ?>:</label>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="<?php echo e(__('messages.enter_phone_number')); ?>">
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">Address:</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address">
+                <label for="address" class="form-label"><?php echo e(__('messages.address')); ?>:</label>
+                <input type="text" class="form-control" id="address" name="address" placeholder="<?php echo e(__('messages.enter_address')); ?>">
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                <label for="password" class="form-label"><?php echo e(__('messages.password')); ?>:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="<?php echo e(__('messages.enter_password')); ?>">
             </div>
             <div class="mb-3">
-                <label for="password_confirmation" class="form-label">Confirm Password:</label>
+                <label for="password_confirmation" class="form-label"><?php echo e(__('messages.confirm_password')); ?>:</label>
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
-                    placeholder="Confirm Password">
+                    placeholder="<?php echo e(__('messages.confirm_password')); ?>">
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Profile Image:</label>
+                <label for="image" class="form-label"><?php echo e(__('messages.profile_image')); ?>:</label>
                 <input type="file" class="form-control" id="image" name="image">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary"><?php echo e(__('messages.submit')); ?></button>
         </form>
     </div>
 <?php $__env->stopSection(); ?>

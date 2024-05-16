@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,17 +19,27 @@
             <div class="container">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link" href="#">{{ __('messages.dashboard') }}</a>
                     </li>
                 </ul>
 
                 <div class="d-flex align-items-center">
                     <ul class="nav nav-pills nav-fill me-2">
-                        <li class="nav-item">
-                            <a class="nav-link underline-link" href="{{route('login')}}">Login</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ __('messages.language') }}
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'en') }}">{{ __('messages.english') }}</a></li>
+                                <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'ar') }}">{{ __('messages.arabic') }}</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('register')}}">Register</a>
+                            <a class="nav-link underline-link" href="{{ route('login') }}">{{ __('messages.login') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                         </li>
                     </ul>
                     <a class="btn btn-dark px-3" href="https://github.com/AbdelrhmanAmer/web-based-assignment2"
@@ -39,6 +49,7 @@
         </nav>
 
         @yield('content')
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

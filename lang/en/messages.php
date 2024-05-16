@@ -2,7 +2,7 @@
 
 return [
     'localization' => 'Localization',
-    'log out' => 'Log out',
+    'log_out' => 'Log out',
     'card_title' => 'Special title treatment',
     'card_body' => 'With supporting text below as a natural lead-in to additional content',
     'card_button' => 'Go somewhere',
@@ -13,5 +13,23 @@ return [
     'login' => 'Login',
     'register' => 'Register',
     'submit' => 'Submit',
-
+    'name' => 'Name',
+    'username' => 'Username',
+    'email' => 'Email',
+    'date_of_birth' => 'Date of Birth',
+    'phone_number' => 'Phone Number',
+    'address' => 'Address',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm Password',
+    'profile_image' => 'Profile Image',
+    'enter_name' => 'Enter your name',
+    'enter_username' => 'Enter your username',
+    'enter_email' => 'Enter your email',
+    'enter_phone_number' => 'Enter phone number',
+    'enter_address' => 'Enter your address',
+    'enter_password' => 'Enter password',
+    'confirm_password' => 'Confirm password',
+    'check_actors' => 'Check Actors',
+    'success' => 'Success',
+    'error' => 'Error',
 ];

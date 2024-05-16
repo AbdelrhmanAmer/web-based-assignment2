@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -18,16 +18,17 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
+                            <?php echo e(__('messages.language')); ?>
+
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="locale/en">English</a></li>
-                            <li><a class="dropdown-item text-light" href="locale/ar">Arabic</a></li>
+                            <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'en')); ?>"><?php echo e(__('messages.english')); ?></a></li>
+                            <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'ar')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a href="<?php echo e(route('logout')); ?>" class="nav-link active" aria-current="page">Log out</a>
+                        <a href="<?php echo e(route('logout')); ?>" class="nav-link active" aria-current="page"><?php echo e(__('messages.log_out')); ?></a>
                     </li>
                 </ul>
             </div>
@@ -42,4 +43,5 @@
 </body>
 
 </html>
-<?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/layouts/app_nav.blade.php ENDPATH**/ ?>
+
+<?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/web-based-assignment2/resources/views/layouts/app_nav.blade.php ENDPATH**/ ?>

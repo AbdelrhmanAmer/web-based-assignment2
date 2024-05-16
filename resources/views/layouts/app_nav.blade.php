@@ -1,5 +1,6 @@
+@extends('layouts.footer')
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -18,16 +19,16 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
+                            {{ __('messages.language') }}
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="locale/en">English</a></li>
-                            <li><a class="dropdown-item text-light" href="locale/ar">Arabic</a></li>
+                            <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'en') }}">{{ __('messages.english') }}</a></li>
+                            <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'ar') }}">{{ __('messages.arabic') }}</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link active" aria-current="page">Log out</a>
+                        <a href="{{ route('logout') }}" class="nav-link active" aria-current="page">{{ __('messages.log_out') }}</a>
                     </li>
                 </ul>
             </div>

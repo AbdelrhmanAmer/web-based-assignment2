@@ -31,4 +31,4 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('locale/{lang}', [LocaleController::class, 'setLocale']);
+Route::get('locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale.switch');

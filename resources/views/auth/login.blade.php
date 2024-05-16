@@ -1,6 +1,6 @@
 @extends('layouts/auth_nav')
 
-@section('title', 'Login')
+@section('title', __('messages.login'))
 
 @section('content')
     <div class="container">
@@ -8,7 +8,7 @@
             @if ($errors->any())
                 <div class="col-12">
                     @foreach ($errors->all() as $error)
-                        <div class="alert alert-danger ">{{ $error }}</div>
+                        <div class="alert alert-danger">{{ $error }}</div>
                     @endforeach
                 </div>
             @endif
@@ -24,14 +24,13 @@
             @csrf
 
             <div class="container my-4 mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                <input type="email" class="form-control" name="email" placeholder="{{ __('messages.enter_email') }}">
             </div>
-            <div class="container my-4   mb-3">
-                <input type="password" class="form-control" name="password" placeholder="Enter password">
+            <div class="container my-4 mb-3">
+                <input type="password" class="form-control" name="password" placeholder="{{ __('messages.enter_password') }}">
             </div>
-            <div class="container my-4   mb-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
-
+            <div class="container my-4 mb-3">
+                <button type="submit" class="btn btn-primary">{{ __('messages.submit') }}</button>
             </div>
         </form>
     </div>
