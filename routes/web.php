@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LocaleController;
 use App\Mail\Email;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -30,3 +31,4 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('locale/{lang}', [LocaleController::class, 'setLocale']);

@@ -1,6 +1,6 @@
 @extends('layouts.app_nav')
 
-@section('title', 'Home')
+@section('title', __('messages.home'))
 
 @section('content')
     <div class="container mt-4">
@@ -9,72 +9,72 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mb-4 ">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ __('messages.card_title') }}</h5>
+                            <p class="card-text">{{ __('messages.card_body') }}</p>
+                            <a href="#" class="btn btn-primary">{{ __('messages.card_button') }}</a>
                         </div>
                     </div>
                 </div>
