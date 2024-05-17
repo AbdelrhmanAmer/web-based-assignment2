@@ -27,6 +27,7 @@ class User extends Authenticatable
         'confirmPassword',
         'date',
         'phone',
+        'address',
         'image'
     ];
 

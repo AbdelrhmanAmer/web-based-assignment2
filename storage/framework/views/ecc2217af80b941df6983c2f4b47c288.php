@@ -10,13 +10,16 @@
     <div class="container">
         <div class="mt-5">
             <?php if($errors->any()): ?>
-                <div class="col-12">
-                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="alert alert-danger mb-3"><?php echo e($error); ?></div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="alert alert-danger" style="width: 70%;">
+                        <ul class="mb-0">
+                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <li><?php echo e($error); ?></li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </ul>
+                    </div>
                 </div>
             <?php endif; ?>
-
             <?php if(session()->has('error')): ?>
                 <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
             <?php endif; ?>
@@ -29,34 +32,34 @@
 
             <div class="mb-3">
                 <label for="name" class="form-label"><?php echo e(__('messages.name')); ?>:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="<?php echo e(__('messages.enter_name')); ?>">
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo e(old('name')); ?>" placeholder="<?php echo e(__('messages.enter_name')); ?>">
             </div>
             <div class="mb-3">
                 <label for="username" class="form-label"><?php echo e(__('messages.username')); ?>:</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="<?php echo e(__('messages.enter_username')); ?>">
+                <input type="text" class="form-control" id="username" name="username" value="<?php echo e(old('username')); ?>" placeholder="<?php echo e(__('messages.enter_username')); ?>">
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label"><?php echo e(__('messages.email')); ?>:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="<?php echo e(__('messages.enter_email')); ?>">
+                <input type="email" class="form-control" id="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="<?php echo e(__('messages.enter_email')); ?>">
             </div>
 
             <div class="mb-3">
                 <label for="date" class="form-label"><?php echo e(__('messages.date_of_birth')); ?>:</label>
                 <div class="d-flex align-items-center">
-                    <input type="date" class="form-control me-2" id="date" name="date">
+                    <input type="date" class="form-control me-2" id="date" name="date" value="<?php echo e(old('date')); ?>">
                     <a class="btn btn-secondary" href="#" role="button" style="white-space: nowrap;"><?php echo e(__('messages.check_actors')); ?></a>
                 </div>
             </div>
 
             <div class="mb-3">
                 <label for="phone" class="form-label"><?php echo e(__('messages.phone_number')); ?>:</label>
-                <input type="number" class="form-control" id="phone" name="phone" placeholder="<?php echo e(__('messages.enter_phone_number')); ?>">
+                <input type="number" class="form-control" id="phone" name="phone" value="<?php echo e(old('phone')); ?>" placeholder="<?php echo e(__('messages.enter_phone_number')); ?>">
             </div>
 
             <div class="mb-3">
                 <label for="address" class="form-label"><?php echo e(__('messages.address')); ?>:</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="<?php echo e(__('messages.enter_address')); ?>">
+                <input type="text" class="form-control" id="address" name="address" value="<?php echo e(old('address')); ?>" placeholder="<?php echo e(__('messages.enter_address')); ?>">
             </div>
 
             <div class="mb-3">
@@ -65,8 +68,7 @@
             </div>
             <div class="mb-3">
                 <label for="password_confirmation" class="form-label"><?php echo e(__('messages.confirm_password')); ?>:</label>
-                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
-                    placeholder="<?php echo e(__('messages.confirm_password')); ?>">
+                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="<?php echo e(__('messages.confirm_password')); ?>">
             </div>
 
             <div class="mb-3">
