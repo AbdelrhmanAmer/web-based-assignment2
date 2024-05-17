@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="#"><?php echo e(config('app.name')); ?></a>
 
                 <ul class="nav nav-pills ms-auto">
