@@ -2,6 +2,11 @@
 
 @section('title', __('messages.register'))
 
+@section('links')
+    <li><a class="dropdown-item text-light" href="{{ url('/en/register') }}">{{ __('messages.english') }}</a></li>
+    <li><a class="dropdown-item text-light" href="{{ url('/ar/register') }}">{{ __('messages.arabic') }}</a></li>
+@endsection
+
 @section('content')
     <style>
         label.form-label {

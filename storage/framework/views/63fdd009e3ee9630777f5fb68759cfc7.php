@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container my-5 " >
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-            <div class="container">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="container mx-4">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><?php echo e(__('messages.dashboard')); ?></a>
                     </li>
@@ -32,8 +32,7 @@
 
                             </a>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'en')); ?>"><?php echo e(__('messages.english')); ?></a></li>
-                                <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'ar')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+                                <?php echo $__env->yieldContent('links'); ?>
                             </ul>
                         </li>
                         <li class="nav-item">

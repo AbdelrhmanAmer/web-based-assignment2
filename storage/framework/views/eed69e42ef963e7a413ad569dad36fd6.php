@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div class="container-fluid my-5">
+    <div class="container my-5">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#"><?php echo e(config('app.name')); ?></a>
 
                 <ul class="nav nav-pills ms-auto">
@@ -22,8 +22,7 @@
 
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'en')); ?>"><?php echo e(__('messages.english')); ?></a></li>
-                            <li><a class="dropdown-item text-light" href="<?php echo e(route('locale.switch', 'ar')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+                            <?php echo $__env->yieldContent('links'); ?>
                         </ul>
                     </li>
 

@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="container-fluid my-5">
+    <div class="container my-5">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">{{ config('app.name') }}</a>
 
                 <ul class="nav nav-pills ms-auto">
@@ -22,8 +22,7 @@
                             {{ __('messages.language') }}
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'en') }}">{{ __('messages.english') }}</a></li>
-                            <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'ar') }}">{{ __('messages.arabic') }}</a></li>
+                            @yield('links')
                         </ul>
                     </li>
 

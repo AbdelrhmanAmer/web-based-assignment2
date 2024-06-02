@@ -2,6 +2,11 @@
 
 @section('title', __('messages.login'))
 
+@section('links')
+    <li><a class="dropdown-item text-light" href="{{ url('/en/login') }}">{{ __('messages.english') }}</a></li>
+    <li><a class="dropdown-item text-light" href="{{ url('/ar/login') }}">{{ __('messages.arabic') }}</a></li>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="mt-5">
@@ -38,3 +43,4 @@
         </form>
     </div>
 @endsection
+

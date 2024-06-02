@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,16 +20,22 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost'])->name('login.post');
-
-Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'registerPost'])->name('register.post');
-
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale.switch');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () { //...
+
+        Route::get('/', function () {
+            return view('welcome');
+        })->name('home');
+        Route::get('/login', [AuthController::class, 'login'])->name('login');
+        Route::get('/register', [AuthController::class, 'register'])->name('register');
+
+    }
+);

@@ -2,6 +2,12 @@
 
 @section('title', __('messages.home'))
 
+@section('links')
+    <li><a class="dropdown-item text-light" href="{{ url('/en') }}">{{ __('messages.english') }}</a></li>
+    <li><a class="dropdown-item text-light" href="{{ url('/ar') }}">{{ __('messages.arabic') }}</a></li>
+@endsection
+
+
 @section('content')
     <div class="container mt-4">
         <div class="row justify-content-center">

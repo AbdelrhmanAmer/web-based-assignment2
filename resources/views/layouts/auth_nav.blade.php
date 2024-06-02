@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container my-5 " >
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
-            <div class="container">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="container mx-4">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">{{ __('messages.dashboard') }}</a>
                     </li>
@@ -31,8 +31,7 @@
                                 {{ __('messages.language') }}
                             </a>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'en') }}">{{ __('messages.english') }}</a></li>
-                                <li><a class="dropdown-item text-light" href="{{ route('locale.switch', 'ar') }}">{{ __('messages.arabic') }}</a></li>
+                                @yield('links')
                             </ul>
                         </li>
                         <li class="nav-item">

@@ -1,5 +1,10 @@
 <?php $__env->startSection('title', __('messages.register')); ?>
 
+<?php $__env->startSection('links'); ?>
+    <li><a class="dropdown-item text-light" href="<?php echo e(url('/en/register')); ?>"><?php echo e(__('messages.english')); ?></a></li>
+    <li><a class="dropdown-item text-light" href="<?php echo e(url('/ar/register')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
     <style>
         label.form-label {
@@ -19,10 +24,12 @@
     <div class="container">
         <div class="mt-5">
             <?php if($errors->any()): ?>
-                <div class="col-12">
-                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <div class="alert alert-danger mb-3"><?php echo e($error); ?></div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <div class="alert alert-danger">
+                    <ul>
+                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <li><?php echo e($error); ?></li>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </ul>
                 </div>
             <?php endif; ?>
 
@@ -57,7 +64,8 @@
                 <div class="mb-3">
                     <label for="date" class="form-label"><?php echo e(__('messages.date_of_birth')); ?>:</label>
                     <div class="d-flex align-items-center">
-                        <input type="date" class="form-control me-2" id="date" name="date" value="<?php echo e(old('date')); ?>">
+                        <input type="date" class="form-control me-2" id="date" name="date"
+                            value="<?php echo e(old('date')); ?>">
                         <a class="btn btn-secondary" href="#" role="button"
                             style="white-space: nowrap;"><?php echo e(__('messages.check_actors')); ?></a>
                     </div>

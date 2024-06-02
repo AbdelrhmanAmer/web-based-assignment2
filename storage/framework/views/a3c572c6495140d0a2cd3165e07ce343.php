@@ -1,5 +1,11 @@
 <?php $__env->startSection('title', __('messages.home')); ?>
 
+<?php $__env->startSection('links'); ?>
+    <li><a class="dropdown-item text-light" href="<?php echo e(url('/en')); ?>"><?php echo e(__('messages.english')); ?></a></li>
+    <li><a class="dropdown-item text-light" href="<?php echo e(url('/ar')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+<?php $__env->stopSection(); ?>
+
+
 <?php $__env->startSection('content'); ?>
     <div class="container mt-4">
         <div class="row justify-content-center">
