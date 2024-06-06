@@ -1,4 +1,15 @@
 <?php return array (
+  'ixudra/curl' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Ixudra\\Curl\\CurlServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Curl' => 'Ixudra\\Curl\\Facades\\Curl',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 

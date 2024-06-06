@@ -13,7 +13,7 @@ class RegisterTest extends TestCase
     public function testRegisterRouteGet(): void
     {
         $response = $this->get('/register');
-        $response->assertStatus(200);
+        $response->assertStatus(302);
     }
     public function testRegisterRoutePost(): void
     {

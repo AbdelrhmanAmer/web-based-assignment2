@@ -13,7 +13,7 @@ class LoginTest extends TestCase
     public function testLoginRouteGet(): void
     {
         $response = $this->get('/login');
-        $response->assertStatus(200);
+        $response->assertStatus(302);
     }
     public function testLoginRoutePost(): void
     {

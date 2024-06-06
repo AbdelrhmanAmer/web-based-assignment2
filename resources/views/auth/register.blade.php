@@ -68,8 +68,8 @@
                     <div class="d-flex align-items-center">
                         <input type="date" class="form-control me-2" id="date" name="date"
                             value="{{ old('date') }}">
-                        <a class="btn btn-secondary" href="#" role="button"
-                            style="white-space: nowrap;">{{ __('messages.check_actors') }}</a>
+                        <button type="button" class="btn btn-secondary" id="checkActorsBtn"
+                            style="white-space: nowrap;">{{ __('messages.check_actors') }}</button>
                     </div>
                 </div>
 
@@ -105,4 +105,20 @@
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('checkActorsBtn').addEventListener('click', function() {
+            var date = document.getElementById('date').value;
+            if (date) {
+                var formattedDate = new Date(date).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: '2-digit'
+                }).split('/').join('-');
+                var url = "{{ route('actors_ids', ['date' => ':date']) }}";
+                url = url.replace(':date', formattedDate);
+                window.location.href = url;
+            } else {
+                alert('Please select a date');
+            }
+        });
+    </script>
 @endsection
