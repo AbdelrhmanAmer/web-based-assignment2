@@ -6189,3 +6189,37 @@
 #46 /opt/lampp/htdocs/web-based-assignment2/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('...')
 #47 {main}
 "} 
+[2024-06-07 11:19:50] local.ERROR: include(C:\Users\dell\Desktop\folders\web-based-assignment2\vendor\composer/../ixudra/curl/src/CurlServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer/../ixudra/curl/src/CurlServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php:576)
+[stacktrace]
+#0 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\dell\\\\D...', 576)
+#1 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(576): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\dell\\\\D...', 576)
+#2 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(576): include('C:\\\\Users\\\\dell\\\\D...')
+#3 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}('C:\\\\Users\\\\dell\\\\D...')
+#4 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(855): Composer\\Autoload\\ClassLoader->loadClass('Ixudra\\\\Curl\\\\Cur...')
+#5 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(789): Illuminate\\Foundation\\Application->resolveProvider('Ixudra\\\\Curl\\\\Cur...')
+#6 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Ixudra\\\\Curl\\\\Cur...')
+#7 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(769): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(263): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2024-06-07 11:32:59] local.ERROR: include(C:\Users\dell\Desktop\folders\web-based-assignment2\vendor\composer/../ixudra/curl/src/CurlServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer/../ixudra/curl/src/CurlServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php:576)
+[stacktrace]
+#0 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\dell\\\\D...', 576)
+#1 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(576): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\dell\\\\D...', 576)
+#2 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(576): include('C:\\\\Users\\\\dell\\\\D...')
+#3 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}('C:\\\\Users\\\\dell\\\\D...')
+#4 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(855): Composer\\Autoload\\ClassLoader->loadClass('Ixudra\\\\Curl\\\\Cur...')
+#5 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(789): Illuminate\\Foundation\\Application->resolveProvider('Ixudra\\\\Curl\\\\Cur...')
+#6 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Ixudra\\\\Curl\\\\Cur...')
+#7 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(769): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(263): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 C:\\Users\\dell\\Desktop\\folders\\web-based-assignment2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
