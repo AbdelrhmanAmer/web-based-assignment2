@@ -1,12 +1,18 @@
 <?php $__env->startSection('title', __('messages.register')); ?>
 
 <?php $__env->startSection('links'); ?>
-    <li><a class="dropdown-item text-light" href="<?php echo e(url('/en/register')); ?>"><?php echo e(__('messages.english')); ?></a></li>
-    <li><a class="dropdown-item text-light" href="<?php echo e(url('/ar/register')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
+    <li><a class="dropdown-item" href="<?php echo e(url('/en/register')); ?>"><?php echo e(__('messages.english')); ?></a></li>
+    <li><a class="dropdown-item" href="<?php echo e(url('/ar/register')); ?>"><?php echo e(__('messages.arabic')); ?></a></li>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
     <style>
+        body {
+            padding: 50px;
+            background-image: url(https://t4.ftcdn.net/jpg/05/42/73/17/360_F_542731787_npIDENXs9NMkl1mtyHKj8De2WBL2vnFW.jpg);
+            background-size: cover;
+        }
+        
         label.form-label {
             font-size: 14px;
             padding-right: 8px;

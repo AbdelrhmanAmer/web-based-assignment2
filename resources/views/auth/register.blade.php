@@ -3,12 +3,18 @@
 @section('title', __('messages.register'))
 
 @section('links')
-    <li><a class="dropdown-item text-light" href="{{ url('/en/register') }}">{{ __('messages.english') }}</a></li>
-    <li><a class="dropdown-item text-light" href="{{ url('/ar/register') }}">{{ __('messages.arabic') }}</a></li>
+    <li><a class="dropdown-item" href="{{ url('/en/register') }}">{{ __('messages.english') }}</a></li>
+    <li><a class="dropdown-item" href="{{ url('/ar/register') }}">{{ __('messages.arabic') }}</a></li>
 @endsection
 
 @section('content')
     <style>
+        body {
+            padding: 50px;
+            background-image: url(https://t4.ftcdn.net/jpg/05/42/73/17/360_F_542731787_npIDENXs9NMkl1mtyHKj8De2WBL2vnFW.jpg);
+            background-size: cover;
+        }
+        
         label.form-label {
             font-size: 14px;
             padding-right: 8px;
